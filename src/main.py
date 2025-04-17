@@ -7,7 +7,7 @@ import traceback
 
 def main():
     iniciar_database()
-    check_or_create_tables()
+    chec1k_or_create_tables()
 
     #necessário para o pandas não truncar os dados
     pd.options.display.max_rows = 99

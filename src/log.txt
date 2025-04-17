@@ -1,0 +1,136 @@
+[2025-04-15 20:16:49] [INFO] Iniciando o banco de dados...
+[2025-04-16 20:07:10] [INFO] Iniciando o banco de dados...
+[2025-04-16 20:08:00] [SUCCESS] --- Banco de dados conectado com sucesso! ---
+[2025-04-16 20:09:01] [INFO] Verificando se as tabelas existem...
+[2025-04-16 20:09:01] [INFO] Tabela não existe, criando tabela FAZENDA
+[2025-04-16 20:09:02] [SUCCESS] Tabela criada com sucesso FAZENDA
+[2025-04-16 20:09:02] [INFO] Tabela não existe, criando tabela INSUMO
+[2025-04-16 20:09:02] [SUCCESS] Tabela criada com sucesso INSUMO
+[2025-04-16 20:09:02] [INFO] Tabela não existe, criando tabela MAQUINARIO
+[2025-04-16 20:09:02] [SUCCESS] Tabela criada com sucesso MAQUINARIO
+[2025-04-16 20:42:20] [CRITICAL] DPY-4011: the database or network closed the connection
+[WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+Help: https://python-oracledb.readthedocs.io/en/latest/user_guide/troubleshooting.html#dpy-4011
+Traceback (most recent call last):
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 394, in oracledb.thin_impl.Protocol._process_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 467, in oracledb.thin_impl.Protocol._receive_packet
+  File "src\\oracledb\\impl/thin/packet.pyx", line 760, in oracledb.thin_impl.ReadBuffer.wait_for_packets_sync
+  File "src\\oracledb\\impl/thin/transport.pyx", line 345, in oracledb.thin_impl.Transport.read_packet
+TimeoutError: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src\\oracledb\\impl/thin/transport.pyx", line 372, in oracledb.thin_impl.Transport.write_packet
+ConnectionResetError: [WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\PYTHON\fiap_fase2_cap6\src\main.py", line 21, in main
+    sair = menu_principal()
+  File "C:\PYTHON\fiap_fase2_cap6\src\menu\menu_principal.py", line 24, in menu_principal
+    menu_fazenda()
+    ~~~~~~~~~~~~^^
+  File "C:\PYTHON\fiap_fase2_cap6\src\menu\fazenda\menu_fazenda.py", line 7, in menu_fazenda
+    return menu_generico(Fazenda)
+  File "C:\PYTHON\fiap_fase2_cap6\src\menu\generico\menu_generico.py", line 44, in menu_generico
+    exportar_json_generico(model)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\PYTHON\fiap_fase2_cap6\src\menu\generico\exportar_json_generico.py", line 13, in exportar_json_generico
+    instances = model.fetch_all()
+  File "C:\PYTHON\fiap_fase2_cap6\src\database\tipos_base\query.py", line 36, in fetch_all
+    cursor.execute(sql)
+    ~~~~~~~~~~~~~~^^^^^
+  File "C:\PYTHON\fiap_fase2_cap6\.venv\Lib\site-packages\oracledb\cursor.py", line 708, in execute
+    impl.execute(self)
+    ~~~~~~~~~~~~^^^^^^
+  File "src\\oracledb\\impl/thin/cursor.pyx", line 277, in oracledb.thin_impl.ThinCursorImpl.execute
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 450, in oracledb.thin_impl.Protocol._process_single_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 451, in oracledb.thin_impl.Protocol._process_single_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 398, in oracledb.thin_impl.Protocol._process_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 69, in oracledb.thin_impl.BaseProtocol._break_external
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 125, in oracledb.thin_impl.BaseProtocol._send_marker
+  File "src\\oracledb\\impl/thin/packet.pyx", line 848, in oracledb.thin_impl.WriteBuffer.end_request
+  File "src\\oracledb\\impl/thin/packet.pyx", line 821, in oracledb.thin_impl.WriteBuffer._send_packet
+  File "src\\oracledb\\impl/thin/transport.pyx", line 375, in oracledb.thin_impl.Transport.write_packet
+  File "C:\PYTHON\fiap_fase2_cap6\.venv\Lib\site-packages\oracledb\errors.py", line 195, in _raise_err
+    raise error.exc_type(error) from cause
+oracledb.exceptions.DatabaseError: DPY-4011: the database or network closed the connection
+[WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+Help: https://python-oracledb.readthedocs.io/en/latest/user_guide/troubleshooting.html#dpy-4011
+
+Erro inesperado saindo do sistema...
+[2025-04-16 20:44:44] [INFO] Iniciando o banco de dados...
+[2025-04-16 20:44:44] [SUCCESS] --- Banco de dados conectado com sucesso! ---
+[2025-04-16 20:44:44] [INFO] Verificando se as tabelas existem...
+[2025-04-16 20:44:44] [INFO] Tabela já existe, não é necessário criar a tabela FAZENDA
+[2025-04-16 20:44:44] [INFO] Tabela já existe, não é necessário criar a tabela INSUMO
+[2025-04-16 20:44:44] [INFO] Tabela já existe, não é necessário criar a tabela MAQUINARIO
+[2025-04-16 21:23:55] [INFO] Salvando novo registro
+[2025-04-16 21:24:15] [DEBUG] Erro ao executar o comando SQL
+ DPY-4011: the database or network closed the connection
+[WinError 10054] Foi forçado o cancelamento de uma conexão existente pelo host remoto
+Help: https://python-oracledb.readthedocs.io/en/latest/user_guide/troubleshooting.html#dpy-4011
+ <class 'oracledb.exceptions.DatabaseError'>
+[2025-04-16 21:24:16] [DEBUG] Erro ao executar o comando SQL
+ 'NoneType' object has no attribute 'send'
+ <class 'AttributeError'>
+[2025-04-16 21:24:18] [DEBUG] Erro ao executar o comando SQL
+ 'NoneType' object has no attribute 'send'
+ <class 'AttributeError'>
+[2025-04-16 21:24:18] [ERROR] Erro ao salvar registro: 'NoneType' object has no attribute 'send'
+[2025-04-16 21:24:18] [CRITICAL] 'NoneType' object has no attribute 'send'
+Traceback (most recent call last):
+  File "C:\PYTHON\fiap_fase2_cap6\src\main.py", line 21, in main
+    sair = menu_principal()
+  File "C:\PYTHON\fiap_fase2_cap6\src\menu\menu_principal.py", line 24, in menu_principal
+    menu_fazenda()
+    ~~~~~~~~~~~~^^
+  File "C:\PYTHON\fiap_fase2_cap6\src\menu\fazenda\menu_fazenda.py", line 7, in menu_fazenda
+    return menu_generico(Fazenda)
+  File "C:\PYTHON\fiap_fase2_cap6\src\menu\generico\menu_generico.py", line 32, in menu_generico
+    cadastrar_generico(model)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\PYTHON\fiap_fase2_cap6\src\menu\generico\cadastrar_generico.py", line 19, in cadastrar_generico
+    nova_instance.save()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\PYTHON\fiap_fase2_cap6\src\database\tipos_base\model.py", line 429, in save
+    raise e
+  File "C:\PYTHON\fiap_fase2_cap6\src\database\tipos_base\model.py", line 416, in save
+    Model.execute_sql(sql, id=id_var)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\PYTHON\fiap_fase2_cap6\src\database\tipos_base\database.py", line 53, in execute_sql
+    raise e
+  File "C:\PYTHON\fiap_fase2_cap6\src\database\tipos_base\database.py", line 43, in execute_sql
+    Database.cursor.execute(sql, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\PYTHON\fiap_fase2_cap6\.venv\Lib\site-packages\oracledb\cursor.py", line 708, in execute
+    impl.execute(self)
+    ~~~~~~~~~~~~^^^^^^
+  File "src\\oracledb\\impl/thin/cursor.pyx", line 277, in oracledb.thin_impl.ThinCursorImpl.execute
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 450, in oracledb.thin_impl.Protocol._process_single_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 451, in oracledb.thin_impl.Protocol._process_single_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 419, in oracledb.thin_impl.Protocol._process_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 393, in oracledb.thin_impl.Protocol._process_message
+  File "src\\oracledb\\impl/thin/messages/base.pyx", line 694, in oracledb.thin_impl.Message.send
+  File "src\\oracledb\\impl/thin/packet.pyx", line 848, in oracledb.thin_impl.WriteBuffer.end_request
+  File "src\\oracledb\\impl/thin/packet.pyx", line 821, in oracledb.thin_impl.WriteBuffer._send_packet
+  File "src\\oracledb\\impl/thin/transport.pyx", line 372, in oracledb.thin_impl.Transport.write_packet
+AttributeError: 'NoneType' object has no attribute 'send'
+
+Erro inesperado saindo do sistema...
+[2025-04-16 21:26:39] [INFO] Iniciando o banco de dados...
+[2025-04-16 21:26:39] [SUCCESS] --- Banco de dados conectado com sucesso! ---
+[2025-04-16 21:26:39] [INFO] Verificando se as tabelas existem...
+[2025-04-16 21:26:39] [INFO] Tabela já existe, não é necessário criar a tabela FAZENDA
+[2025-04-16 21:26:39] [INFO] Tabela já existe, não é necessário criar a tabela INSUMO
+[2025-04-16 21:26:39] [INFO] Tabela já existe, não é necessário criar a tabela MAQUINARIO
+[2025-04-16 21:27:20] [INFO] Salvando novo registro
+[2025-04-16 21:27:20] [SUCCESS] Registro salvo com sucesso
+[2025-04-16 21:30:07] [INFO] Instâncias de Fazendas obtidas da database com sucesso!
+[2025-04-16 21:30:30] [INFO] Instâncias de Fazenda obtidas da database com sucesso!
+[2025-04-16 21:30:40] [INFO] Exportando dados para o arquivo file_exports/Fazendas-2025-04-16_21-30-40.json...
+[2025-04-16 21:30:40] [SUCCESS] Dados exportados com sucesso para o arquivo file_exports/Fazendas-2025-04-16_21-30-40.json!
