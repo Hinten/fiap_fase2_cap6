@@ -40,8 +40,9 @@ A solução utiliza conceitos de subalgoritmos, estruturas de dados (listas, tup
 - **Subalgoritmos**: O projeto utiliza funções e procedimentos com passagem de parâmetros para modularizar e organizar o código, promovendo reutilização e clareza. Exemplos podem ser observados em diversas partes do código, como:
 
   - O procedimento `main()` no arquivo [main.py](src/main.py), que organiza o fluxo principal da aplicação.
-  - A função `log()` no arquivo [loggers.py](src/logger/loggers.py), que implementa diferentes níveis de log com parâmetros como `message`, `level` e outros opcionais.
+  - O procedimento `log()` no arquivo [loggers.py](src/logger/loggers.py), que implementa diferentes níveis de log com parâmetros como `message`, `level` e outros opcionais.
   - O método `execute_sql()` no arquivo [database.py](src/database/tipos_base/database.py), que executa comandos SQL com parâmetros como `sql`, `max_retries` e `commit`.
+  - A função `makeRed()` no arquivo [color_text.py](src/logger/color_text.py), que transforma o texto em vermelho e devolve uma string para ser printada para o user.
 
 
   Esses subalgoritmos são fundamentais para garantir a modularidade, a reutilização de código e a manutenção eficiente do sistema.
