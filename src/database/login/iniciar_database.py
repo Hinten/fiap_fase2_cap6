@@ -11,6 +11,7 @@ def iniciar_database():
     log_info("Iniciando o banco de dados...")
     user = os.environ.get('user')
     senha = os.environ.get('senha')
+    dsn = os.environ.get('dsn')
 
     pegou_ambiente = False
     pegou_b64 = False
@@ -18,7 +19,7 @@ def iniciar_database():
     if user is not None and senha is not None:
         pegou_ambiente = True
     else:
-        user, senha = carregar_senha_arquivo_base64()
+        user, senha, dsn = carregar_senha_arquivo_base64()
 
         if user is not None and senha is not None:
             pegou_b64 = True
@@ -37,11 +38,16 @@ def iniciar_database():
             log_warning("--- Senha não encontrada ---", write=False)
             senha = input_str('senha', message_override="Digite a senha do banco de dados: ")
 
-        iniciou = Database.init_oracledb(user=user, password=senha)
+        if dsn is None:
+            log_warning("--- DSN não encontrado ---", write=False)
+            dsn = input_str('dsn', message_override="Digite o DSN do banco de dados\n(Pressione enter para o valor oracle.fiap.com.br:1521/ORCL): ", old_value='oracle.fiap.com.br:1521/ORCL')
+
+        iniciou = Database.init_oracledb(user=user, password=senha, dsn=dsn)
 
         if not iniciou:
             user = None
             senha = None
+            dsn = None
             log_error("--- Erro ao conectar ao banco de dados, tentando novamente. ---")
 
     log_success("--- Banco de dados conectado com sucesso! ---")
@@ -51,7 +57,7 @@ def iniciar_database():
         salvar = input_bool('Salvar Senha', modo='S')
 
         if salvar:
-            salvar_senha_arquivo_base64(user, senha)
+            salvar_senha_arquivo_base64(user, senha, dsn)
             log_success("--- Senha salva com sucesso! ---", write=False)
 
 

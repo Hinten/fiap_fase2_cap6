@@ -11,7 +11,10 @@ class Database(ABC):
     cursor: ClassVar[oracledb.Cursor | None] = None
 
     @staticmethod
-    def init_oracledb(*, user, password, dsn='oracle.fiap.com.br:1521/ORCL') -> bool:
+    def init_oracledb(*, user, password, dsn:str|None) -> bool:
+
+        dsn = dsn or 'oracle.fiap.com.br:1521/ORCL'
+
         try:
             conn = oracledb.connect(user=user, password=password, dsn=dsn)
             # Cria as instruções para cada módulo
