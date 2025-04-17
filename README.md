@@ -7,7 +7,7 @@
 <br>
 
 
-# Nome do projeto
+# Projeto: fiap_fase2_cap6
 
 ## Atividade em Grupo: FIAP - 1TIAOB - 2025/1 - Fase2 Cap6
 
@@ -22,7 +22,7 @@
 ### Tutor(a) 
 - <a href="proflucas.moreira@fiap.com.br">Lucas Gomes Moreira</a>
 ### Coordenador(a)
-- <a href="proflucas.moreira@fiap.com.br">Lucas Gomes Moreira</a>
+- <a href="profandre.chiovato@fiap.com.br">André Godoi Chiovato</a>
 
 
 ## 📜 Descrição
