@@ -1,3 +1,4 @@
+from src.menu.relatorio.menu_relatorio import menu_relatorio
 from src.menu.fazenda.menu_fazenda import menu_fazenda
 from src.menu.insumos.menu_insumos import menu_insumos
 from src.menu.maquinario.menu_maquinario import menu_maquinario
@@ -30,7 +31,7 @@ def menu_principal() -> None|bool:
             menu_maquinario()
 
         case '4':
-            print('Relatórios')
+            menu_relatorio()
         case _:
             print('Opção inválida. Tente novamente.')
 
