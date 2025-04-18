@@ -18,19 +18,38 @@ class Relatorio:
     
     @staticmethod
     def gerar_relatorio_maquinario(fazenda: Fazenda, maquinario: Maquinario) -> Dict[str, Any]:
-        rota = maquinario.calcular_rota(fazenda)
-        distancia = maquinario.calcular_distancia(rota)
-        consumo = maquinario.calcular_consumo(distancia, maquinario.consumo)
+        try:
+            rota = maquinario.calcular_rota(fazenda)
+            
+            distancia_metros = maquinario.calcular_distancia(rota)
         
-        return {
-            'Fazenda': fazenda.nome,
-            'Maquinário': maquinario.nome,
-            'Área (m²)': fazenda.area(),
-            'Distância total (m)': distancia,
-            'Consumo de combustível (litros)': consumo,
-            'Velocidade máxima (km/h)': maquinario.valocidademax,
-            'Largura do equipamento (m)': maquinario.largura
-        }
+            distancia_km = distancia_metros / 1000
+            
+            consumo_litros = maquinario.calcular_consumo(distancia_km, maquinario.consumo)
+            
+            velocidade_media = maquinario.valocidademax * 0.7
+            tempo_horas = distancia_km / velocidade_media
+            tempo_formatado = f"{int(tempo_horas)}h {int((tempo_horas % 1) * 60)}min"
+            
+            maquinario.desenhar_rota(rota, titulo=f"Rota {maquinario.nome} - {fazenda.nome}")
+            
+            return {
+                'Fazenda': fazenda.nome,
+                'Maquinário': maquinario.nome,
+                'Área da fazenda (m²)': fazenda.area(),
+                'Formato da fazenda': fazenda.formato.name,
+                'Largura do equipamento (m)': maquinario.largura,
+                'Velocidade máxima (km/h)': maquinario.valocidademax,
+                'Distância total (km)': round(distancia_km, 2),
+                'Eficiência (km/l)': maquinario.consumo,
+                'Consumo estimado (litros)': round(consumo_litros, 2),
+                'Tempo estimado': tempo_formatado,
+                'Número de voltas': len(rota)//2,
+                'Rota gerada': f"Ver arquivo Rota_{maquinario.nome}_{fazenda.nome}_*.png"
+            }
+        
+        except Exception as e:
+            raise RuntimeError(f"Erro ao gerar relatório: {str(e)}")
     
     @staticmethod
     def gerar_relatorio_insumo(fazenda: Fazenda, insumo: Insumo) -> Dict[str, Any]:

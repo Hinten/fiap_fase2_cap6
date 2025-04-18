@@ -47,7 +47,7 @@ def menu_relatorio_maquinario():
     
     relatorio = Relatorio.gerar_relatorio_maquinario(fazenda, maquinario)
     
-    print("\n--- Relatório de Consumo ---")
+    print("\n--- Relatório de Maquinário ---")
     for chave, valor in relatorio.items():
         print(f"{chave}: {valor}")
 
