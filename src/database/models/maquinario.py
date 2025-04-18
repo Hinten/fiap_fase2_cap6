@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 import matplotlib.pyplot as plt
 from datetime import datetime
 from src.logger.loggers import log_success
+from src.settings import EXPORTS_DIR
 
 
 @dataclass(frozen=True, eq=True)
@@ -117,7 +118,7 @@ class Maquinario(Model):
         plt.grid(True)
         now = datetime.now()
 
-        filename = f"{titulo}_{now.strftime('%Y%m%d_%H%M%S')}.png"
+        filename = f"{EXPORTS_DIR}/{titulo}_{now.strftime('%Y%m%d_%H%M%S')}.png"
         plt.savefig(filename)
         plt.close()
 
