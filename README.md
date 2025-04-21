@@ -166,7 +166,7 @@ Opção 1: <b>Manutenção de Fazendas:</b> ([menu_fazenda.py](src/menu/fazenda/
 5) Exportar Fazendas para JSON
 6) Importar Fazendas de um JSON
 
-* Aqui é possível gerenciar todos os dados da Fazenda, como Cadastrar, Listar, Editar, Excluir, além da Exportação ou Importação dos dados no formato JSON.*
+* Aqui é possível gerenciar todos os dados da Fazenda, como Cadastrar, Listar, Editar, Excluir, além da Exportação ou Importação dos dados no formato JSON.
 
 Opção 2: <b>Manutenção de Insumos:</b> ([menu_insumos.py](src/menu/insumos/menu_insumos.py))
 1) Cadastrar Insumos
@@ -176,7 +176,7 @@ Opção 2: <b>Manutenção de Insumos:</b> ([menu_insumos.py](src/menu/insumos/m
 5) Exportar Insumos para JSON
 6) Importar Insumos de um JSON
 
-* Aqui é possível gerenciar todos os dados dos Insumos, como Cadastrar, Listar, Editar, Excluir, além da Exportação ou Importação dos dados no formato JSON.*
+* Aqui é possível gerenciar todos os dados dos Insumos, como Cadastrar, Listar, Editar, Excluir, além da Exportação ou Importação dos dados no formato JSON.
 
 Opção 3: <b>Manutenção de Maquinário:</b> ([menu_maquinario.py](src/menu/maquinario/menu_maquinario.py))
 1) Cadastrar Maquinário
@@ -186,11 +186,60 @@ Opção 3: <b>Manutenção de Maquinário:</b> ([menu_maquinario.py](src/menu/ma
 5) Exportar Maquinário para JSON
 6) Importar Maquinário de um JSON
 
-* Aqui é possível gerenciar todos os dados do Maquinário, como Cadastrar, Listar, Editar, Excluir, além da Exportação ou Importação dos dados no formato JSON.*
+* Aqui é possível gerenciar todos os dados do Maquinário, como Cadastrar, Listar, Editar, Excluir, além da Exportação ou Importação dos dados no formato JSON.
+
+Opção 4: <b>Relatórios:</b> ([menu_relatorio.py](src/menu/relatorio/menu_relatorio.py))
+1) Relatório de Fazendas
+2) Relatório de Maquinários
+3) Relatório de Insumos
+
+* Em cada opção de relatório selecionada será exibido a lista de Fazendas, Maquinários ou Insumos cadastrados no Banco de Dados através das opções anteriores do Menu.
+
+<strong>Exemplos de Relatórios:</strong>
+
+- <strong>--- Relatório da Fazenda ---</strong>
+- Nome: Joaozinho
+- Tipo de Cultura: cana
+- Formato: retangulo
+- Base (m): 250.0
+- Altura (m): 500.0
+- Área (m²): 125000.0
+
+
+- <strong>--- Relatório de Maquinário ---</strong>
+- Fazenda: Joaozinho
+- Maquinário: Colheitadeira
+- Área da fazenda (m²): 125000.0
+- Formato da fazenda: Retângulo
+- Largura do equipamento (m): 4.0
+- Velocidade máxima (km/h): 10.0
+- Distância total (km): 3907.24
+- Eficiência (km/l): 20.0
+- Consumo estimado (litros): 195.36
+- Tempo estimado: 558h 10min
+- Número de voltas: 125
+- Rota gerada: Ver arquivo Rota_Colheitadeira_Joaozinho_*.png (aqui é gerado uma imagem com o desenho da rota realizada pelo maquinário, o arquivo é disponibillizado na pasta [file_exports](src/file_exports/).)
+
+- 
+- <strong>--- Relatório de Insumos ---</strong>
+- Fazenda: Joaozinho
+- Insumo: Fosforo
+- Tipo de Cultura: cana
+- Área total (hectares): 12.5
+- Unidade de medida: kg
+- Consumo por hectare: 50.0 kg/ha
+- Consumo total estimado: 625.0
+- Custo por unidade: R$150.0/kg
+- Custo total estimado: R$93750.0
+- Detalhes: Equivalente a 625.0 kg
+
+
+
 
 ## 🗃 Histórico de lançamentos
 
-
+* 0.1.3 - 21/04/2025  - Atualização do readme para a inclusão das informações sobre os relatórios.
+* 0.1.2 - 18/04/2025  - Inclusão dos relatórios na aplicação.
 * 0.1.1 - 17/04/2025  - Atualização do readme para a inclusão de informações sobre o projeto e melhorias na formatação do código.
 * 0.1.0 - 15/04/2025  - Versão preliminar da nossa aplicação que inclui a geração do script de Banco de Dados
 
