@@ -233,7 +233,6 @@ Opção 4: <b>Relatórios:</b> ([menu_relatorio.py](src/menu/relatorio/menu_rela
 
 
 
-
 ## 🗃 Histórico de lançamentos
 
 * 0.1.3 - 21/04/2025  - Atualização do readme para a inclusão das informações sobre os relatórios.
