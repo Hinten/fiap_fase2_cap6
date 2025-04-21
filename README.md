@@ -195,6 +195,7 @@ Opção 4: <b>Relatórios:</b> ([menu_relatorio.py](src/menu/relatorio/menu_rela
 
 * Em cada opção de relatório selecionada será exibido a lista de Fazendas, Maquinários ou Insumos cadastrados no Banco de Dados através das opções anteriores do Menu.
 
+<br>
 <strong>Exemplos de Relatórios:</strong>
 
 - <strong>--- Relatório da Fazenda ---</strong>
@@ -205,7 +206,7 @@ Opção 4: <b>Relatórios:</b> ([menu_relatorio.py](src/menu/relatorio/menu_rela
 - Altura (m): 500.0
 - Área (m²): 125000.0
 
-
+<br>
 
 - <strong>--- Relatório de Maquinário ---</strong>
 - Fazenda: Joaozinho
@@ -221,7 +222,7 @@ Opção 4: <b>Relatórios:</b> ([menu_relatorio.py](src/menu/relatorio/menu_rela
 - Número de voltas: 125
 - Rota gerada: Ver arquivo Rota_Colheitadeira_Joaozinho_*.png (aqui é gerado uma imagem com o desenho da rota realizada pelo maquinário, o arquivo é disponibillizado na pasta [file_exports](src/file_exports/).)
 
-
+<br>
 
 - <strong>--- Relatório de Insumos ---</strong>
 - Fazenda: Joaozinho
@@ -235,7 +236,7 @@ Opção 4: <b>Relatórios:</b> ([menu_relatorio.py](src/menu/relatorio/menu_rela
 - Custo total estimado: R$93750.0
 - Detalhes: Equivalente a 625.0 kg
 
-
+<br>
 
 
 ## 🗃 Histórico de lançamentos
