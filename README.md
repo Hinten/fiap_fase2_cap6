@@ -206,6 +206,7 @@ Opção 4: <b>Relatórios:</b> ([menu_relatorio.py](src/menu/relatorio/menu_rela
 - Área (m²): 125000.0
 
 
+
 - <strong>--- Relatório de Maquinário ---</strong>
 - Fazenda: Joaozinho
 - Maquinário: Colheitadeira
@@ -220,7 +221,8 @@ Opção 4: <b>Relatórios:</b> ([menu_relatorio.py](src/menu/relatorio/menu_rela
 - Número de voltas: 125
 - Rota gerada: Ver arquivo Rota_Colheitadeira_Joaozinho_*.png (aqui é gerado uma imagem com o desenho da rota realizada pelo maquinário, o arquivo é disponibillizado na pasta [file_exports](src/file_exports/).)
 
-- 
+
+
 - <strong>--- Relatório de Insumos ---</strong>
 - Fazenda: Joaozinho
 - Insumo: Fosforo
